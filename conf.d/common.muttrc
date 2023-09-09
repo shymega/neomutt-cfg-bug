@@ -1,0 +1,48 @@
+set editor = "emacsclient -cq"
+
+# set up cache storage paths
+set header_cache = "~/.cache/mutt/cache/headers"
+set message_cachedir = "~/.cache/mutt/cache/bodies"
+set certificate_file = "~/.cache/mutt/certificates"
+
+set mailcap_path = "./mailcap.cfg"
+
+alternative_order text/plain text/html
+auto_view text/html
+
+set mail_check = 30
+unset wait_key
+set timeout = 5
+set sleep_time = 0
+set delete
+unset confirmappend
+set quit
+unset mark_old
+set smart_wrap
+set query_command= "mates mutt-query '%s'"
+set sleep_time = 0
+unset beep
+auto_view text/html
+set index_format="%4C %Z %{%b %d %R} %-15.15L (%?l?%4l&%4c?) %s"
+
+# Normally you'd have to hit Ctrl-T for completion.
+# This rebinds it to Tab.
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
+set imap_check_subscribed 
+set imap_list_subscribed 
+set mail_check_stats 
+set imap_idle
+unset ssl_force_tls
+set imap_keepalive = 300
+unset imap_passive
+
+set sort = threads
+set sort_browser = alpha
+set sort_aux = reverse-last-date-received
+
+unset sig_dashes
+
+# This line gets rid of iso 8859 issues with attachments
+set rfc2047_parameters

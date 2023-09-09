@@ -1,0 +1,9 @@
+# Sidebar
+set sidebar_width = 20
+set sidebar_visible = no
+
+# Sidebar binds
+bind index,pager \CP sidebar-prev                 # Ctrl-n to select next folder
+bind index,pager \CN sidebar-next                 # Ctrl-p to select previous folder
+bind index,pager \CI sidebar-open                 # Ctrl-o to open selected folder
+bind index,pager \CB sidebar-toggle-visible       # Ctrl-b to toggle visibility of the sidebar

@@ -1,0 +1,22 @@
+# Account Settings ------------------------------
+
+unmailboxes *
+
+set realname = "Dom (shymega) Rodriguez"
+set from = "git@shymega.org.uk"
+
+set signature = "./git@shymega.org.uk.sig"
+
+set imap_pass = "default"
+
+set folder = "imap://$from@localhost:143"
+
+# Inbox
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set postponed = "+Drafts"
+set trash = "+Trash"
+
+set use_from
+
+set smtp_url = "smtp://localhost:25/"

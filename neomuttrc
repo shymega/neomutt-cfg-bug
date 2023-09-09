@@ -1,0 +1,24 @@
+# Source common muttrc
+source ./conf.d/common.muttrc
+
+# Source sidebar
+source ./conf.d/sidebar.muttrc
+
+# Source PGP
+source ./conf.d/pgp.muttrc
+
+# Source status bar
+source ./conf.d/statusbar.muttrc
+
+# Source colorscheme
+source ./conf.d/themes/zenburn.muttrc
+
+# Source default account settings
+source ./conf.d/accounts/hello@shymega.org.uk.muttrc
+
+# Setup multiple account macros
+macro index,pager <f2> '<sync-mailbox><enter-command>source ./conf.d/accounts/hello@shymega.org.uk.muttrc<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ./conf.d/accounts/git@shymega.org.uk.muttrc<enter><change-folder>!<enter>'
+
+account-hook 'imap.hello' 'source ./conf.d/accounts/hello@shymega.org.uk.muttrc'
+account-hook 'imap.git' 'source ./conf.d/accounts/git@shymega.org.uk.muttrc'
